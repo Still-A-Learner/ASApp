@@ -21,10 +21,22 @@ public class SecondFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_second, container, false);
     }
 
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState)
+    {
         super.onViewCreated(view, savedInstanceState);
 
-        String myArg = SecondFragmentArgs.fromBundle(getArguments()).getMyArg();
+        Integer count = myArg;
+        Random r = new java.util.Random();
+        Integer rand = 0;
+        if (count > 0)
+        {
+            rand = r.nextInt(count + 1);
+        }
+
+        TextView randomView = view.getRootView().findViewById(R.id.textview_random);
+        randomView.setText(randomNumber.toString());
+
+        Integer myArg = SecondFragmentArgs.fromBundle(getArguments()).getMyArg();
         TextView textView = view.findViewById(R.id.textview_second);
         textView.setText(getString(R.string.hello_second_fragment, myArg));
 

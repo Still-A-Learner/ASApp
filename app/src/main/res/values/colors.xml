@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark"> #45D1AA </color>
     <color name="colorAccent"> #ABC123 </color>
     <color name="Black"> #000022 </color>
-    <color name="white"> #FFFFFF </color>
+    <color name="White"> #FFFFFF </color>
+    <color name="screenBackground"> #2196F3 </color>
+    <color name="buttonBkgd"> #BBDEFB </color>
+    <color name="screenBackground2">#26C6DA</color>
 </resources>
